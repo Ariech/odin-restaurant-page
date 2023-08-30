@@ -34,11 +34,34 @@ function createMain() {
   return main;
 }
 
+function createFooter() {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+
+  const copyright = document.createElement("p");
+  copyright.textContent = `Coded by Ariech`;
+
+  const githubLink = document.createElement("a");
+  githubLink.href = "https://github.com/Ariech";
+  githubLink.setAttribute("target", "_blank");
+
+  const githubIcon = document.createElement("i");
+  githubIcon.classList.add("fa-brands");
+  githubIcon.classList.add("fa-github");
+
+  githubLink.appendChild(githubIcon);
+  footer.appendChild(copyright);
+  footer.appendChild(githubLink);
+
+  return footer;
+}
+
 function render() {
   const contentWrapper = document.getElementById("content");
 
   contentWrapper.appendChild(createHeader());
   contentWrapper.appendChild(createMain());
+  contentWrapper.appendChild(createFooter());
 }
 
 export { render };

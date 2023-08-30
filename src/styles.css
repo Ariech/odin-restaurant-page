@@ -14,8 +14,18 @@ html,
 body {
   height: 100%;
   background-color: #b3acac;
+  background-image: url("../dist/9d5d0870418f00063d63.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
   color: white;
+}
+
+#content {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -23,21 +33,41 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: var(--background-dark);
 }
 
 .restaurant-name {
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: 0.5rem;
 }
 
 .nav {
   display: flex;
   font-size: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-item {
   list-style: none;
-  padding: 2rem 2rem 0;
+  padding: 1rem 2rem 0;
+}
+
+.main {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--background-dark);
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+
+.fa-github::before {
+  content: "\f09b";
+  color: #fff;
 }
