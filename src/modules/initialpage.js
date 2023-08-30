@@ -17,15 +17,28 @@ function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
 
+  const h1 = document.createElement("h1");
+  h1.textContent = "Duckies";
+  h1.classList.add("restaurant-name");
+
+  header.appendChild(h1);
   header.appendChild(createNav());
 
   return header;
+}
+
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+
+  return main;
 }
 
 function render() {
   const contentWrapper = document.getElementById("content");
 
   contentWrapper.appendChild(createHeader());
+  contentWrapper.appendChild(createMain());
 }
 
 export { render };
