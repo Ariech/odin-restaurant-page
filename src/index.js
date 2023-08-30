@@ -1,5 +1,4 @@
 import "./styles.css";
-import { display } from "./modules/initialpage";
+import { render } from "./modules/initialpage";
 
-display();
-console.log("Hello");
+render();

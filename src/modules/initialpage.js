@@ -1,19 +1,31 @@
-function display() {
-  const contentWrapper = document.getElementById("content");
+function createNav() {
+  const nav = document.createElement("nav");
+  const navItems = ["home", "menu", "contact"];
 
-  const h1 = document.createElement("h1");
-  h1.textContent = "Restaurant";
+  navItems.forEach((item) => {
+    let newItem = document.createElement("li");
+    newItem.classList.add("nav-item");
+    newItem.textContent = item.charAt(0).toUpperCase() + item.slice(1);
+    nav.appendChild(newItem);
+  });
 
-  const img = document.createElement("img");
-  img.src =
-    "https://cdn.pixabay.com/photo/2023/08/15/06/31/bird-8191339_1280.jpg";
-
-  const p = document.createElement("p");
-  p.textContent = "Trial text";
-
-  contentWrapper.appendChild(h1);
-  contentWrapper.appendChild(img);
-  contentWrapper.appendChild(p);
+  nav.classList.add("nav");
+  return nav;
 }
 
-export { display };
+function createHeader() {
+  const header = document.createElement("header");
+  header.classList.add("header");
+
+  header.appendChild(createNav());
+
+  return header;
+}
+
+function render() {
+  const contentWrapper = document.getElementById("content");
+
+  contentWrapper.appendChild(createHeader());
+}
+
+export { render };
