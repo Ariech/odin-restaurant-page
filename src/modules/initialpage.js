@@ -1,3 +1,5 @@
+import addHomeToMain from "./home";
+
 function createNav() {
   const nav = document.createElement("nav");
   const navItems = ["home", "menu", "contact"];
@@ -62,6 +64,8 @@ function render() {
   contentWrapper.appendChild(createHeader());
   contentWrapper.appendChild(createMain());
   contentWrapper.appendChild(createFooter());
+
+  addHomeToMain();
 }
 
 export { render };

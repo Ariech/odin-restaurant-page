@@ -55,7 +55,17 @@ body {
 }
 
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+}
+
+.home {
+  margin: 4rem 0;
+  width: 960px;
+  height: 600px;
+  background-color: var(--background-dark);
 }
 
 .footer {
