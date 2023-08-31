@@ -2,6 +2,7 @@
 
 :root {
   --background-dark: rgba(0, 0, 0, 0.9);
+  --background-light: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -26,6 +27,7 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-light);
 }
 
 .header {
@@ -47,25 +49,70 @@ body {
   font-size: 1.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
 }
 
 .nav-item {
   list-style: none;
-  padding: 1rem 2rem 0;
+  padding: 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
 }
 
 .main {
   display: flex;
-  justify-content: center;
   align-items: center;
+  margin: 3rem;
   flex: 1;
 }
 
 .home {
-  margin: 4rem 0;
-  width: 960px;
-  height: 600px;
-  background-color: var(--background-dark);
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 4rem 0 4rem 25rem;
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.home-h2 {
+  font-size: 5rem;
+}
+
+.home-h3 {
+  align-self: center;
+  font-size: 1.5rem;
+}
+
+.order-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-button {
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  background-color: white;
+  border: none;
+  color: black;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: black;
+  color: white;
 }
 
 .footer {
