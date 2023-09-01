@@ -58,6 +58,19 @@ function createFooter() {
   return footer;
 }
 
+function setButtonListeners() {
+  const navItems = document.querySelectorAll(".nav-item");
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      navItems.forEach((item) => {
+        item.classList.remove("active");
+      });
+      e.target.classList.toggle("active");
+    });
+  });
+}
+
 function render() {
   const contentWrapper = document.getElementById("content");
 
@@ -66,6 +79,7 @@ function render() {
   contentWrapper.appendChild(createFooter());
 
   addHomeToMain();
+  setButtonListeners();
 }
 
 export { render };
