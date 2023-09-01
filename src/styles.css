@@ -3,6 +3,8 @@
 :root {
   --background-dark: rgba(0, 0, 0, 0.9);
   --background-light: rgba(0, 0, 0, 0.3);
+  --background-pink-light: #f30c4e;
+  --background-pink-dark: #b60e38;
 }
 
 * {
@@ -15,7 +17,7 @@ html,
 body {
   height: 100%;
   background-color: #b3acac;
-  background-image: url("../dist/9d5d0870418f00063d63.jpg");
+  background-image: url("../dist/img/9d5d0870418f00063d63.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -103,16 +105,15 @@ body {
 .order-button {
   padding: 2rem 4rem;
   font-size: 1.5rem;
-  background-color: white;
+  background-color: var(--background-pink-light);
   border: none;
-  color: black;
+  color: white;
   border-radius: 2rem;
   cursor: pointer;
 }
 
 .order-button:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--background-pink-dark);
 }
 
 .footer {
