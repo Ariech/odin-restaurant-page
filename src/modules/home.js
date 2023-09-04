@@ -32,6 +32,5 @@ function createHome() {
 
 export default function addHomeToMain() {
   const main = document.querySelector(".main");
-
   main.appendChild(createHome());
 }
