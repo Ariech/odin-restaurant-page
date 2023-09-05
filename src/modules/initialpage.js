@@ -1,3 +1,4 @@
+import addContactToMain from "./contact";
 import addHomeToMain from "./home";
 import addMenuToMain from "./menu";
 
@@ -59,19 +60,6 @@ function createFooter() {
   return footer;
 }
 
-// function setButtonListeners() {
-//   const navItems = document.querySelectorAll(".nav-item");
-
-//   navItems.forEach((item) => {
-//     item.addEventListener("click", (e) => {
-//       navItems.forEach((item) => {
-//         item.classList.remove("active");
-//       });
-//       e.target.classList.toggle("active");
-//     });
-//   });
-// }
-
 function setButtonListeners() {
   const mainContent = document.querySelector(".main");
   const navItems = document.querySelectorAll(".nav-item");
@@ -79,11 +67,11 @@ function setButtonListeners() {
   navItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       const target = e.target.textContent;
-      console.log(target);
       mainContent.innerHTML = "";
 
       if (target === "Home") addHomeToMain();
       if (target === "Menu") addMenuToMain();
+      if (target === "Contact") addContactToMain();
     });
   });
 }
