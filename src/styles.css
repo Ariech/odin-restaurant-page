@@ -61,6 +61,7 @@ body {
   list-style: none;
   padding: 1rem 1rem 0;
   cursor: pointer;
+  user-select: none;
 }
 
 .nav-item:hover {
